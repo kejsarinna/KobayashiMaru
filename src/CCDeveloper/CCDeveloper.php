@@ -14,29 +14,29 @@ class CCDeveloper implements IController {
   }
 
 
-  /**
-    * Create a list of links in the supported ways.
-   */
-  public function Links() {  
-    $this->Menu();
-    
-    $kb = CKobayashi::Instance();
-    
-    $url = 'developer/links';
-    $current      = $kb->request->CreateUrl($url);
+         /**
+          * Create a list of links in the supported ways.
+         */
+        public function Links() {        
+                $this->Menu();
+                
+                $kb = CKobayashi::Instance();
+                
+                $url = 'developer/links';
+                $current      = $kb->request->CreateUrl($url);
 
-    $kb->request->cleanUrl = false;
-    $kb->request->querystringUrl = false;    
-    $default      = $kb->request->CreateUrl($url);
-    
-    $kb->request->cleanUrl = true;
-    $clean        = $kb->request->CreateUrl($url);    
-    
-    $kb->request->cleanUrl = false;
-    $kb->request->querystringUrl = true;    
-    $querystring  = $kb->request->CreateUrl($url);
-    
-    $kb->data['main'] .= <<<EOD
+                $kb->request->cleanUrl = false;
+                $kb->request->querystringUrl = false;                
+                $default      = $kb->request->CreateUrl($url);
+                
+                $kb->request->cleanUrl = true;
+                $clean        = $kb->request->CreateUrl($url);                
+                
+                $kb->request->cleanUrl = false;
+                $kb->request->querystringUrl = true;                
+                $querystring  = $kb->request->CreateUrl($url);
+                
+                $kb->data['main'] .= <<<EOD
 <h2>CRequest::CreateUrl()</h2>
 <p>Here is a list of urls created using above method with various settings. All links should lead to
 this same page.</p>
@@ -48,23 +48,23 @@ this same page.</p>
 </ul>
 <p>Enables various and flexible url-strategy.</p>
 EOD;
-  }
+        }
 
 
-  /**
-    * Create a method that shows the menu, same for all methods
-   */
-  private function Menu() {  
-    $kb = CKobayashi::Instance();
-    $menu = array('developer', 'developer/index', 'developer/links');
-    
-    $html = null;
-    foreach($menu as $val) {
-      $html .= "<li><a href='" . $kb->request->CreateUrl($val) . "'>$val</a>";  
-    }
-    
-    $kb->data['title'] = "The Developer Controller";
-    $kb->data['main'] = <<<EOD
+        /**
+          * Create a method that shows the menu, same for all methods
+         */
+        private function Menu() {        
+                $kb = CKobayashi::Instance();
+                $menu = array('developer', 'developer/index', 'developer/links');
+                
+                $html = null;
+                foreach($menu as $val) {
+                  $html .= "<li><a href='" . $kb->request->CreateUrl($val) . "'>$val</a>";  
+                }
+                
+                $kb->data['title'] = "The Developer Controller";
+                $kb->data['main'] = <<<EOD
 <h1>The Developer Controller</h1>
 <p>This is what you can do for now:</p>
 <ul>
@@ -73,4 +73,4 @@ $html
 EOD;
   }
   
-}  
+} 

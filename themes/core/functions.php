@@ -3,7 +3,6 @@
  * Helpers for the template file.
  */
 $kb->data['header'] = '<h1>Kobayashi Maru</h1>';
-$kb->data['main']   = '<p>Main: Now with a theme engine, Not much more to report for now.</p>';
 $kb->data['footer'] = <<<EOD
 <p>Footer: &copy; Lydia by Mikael Roos (mos@dbwebb.se) used by Astrid Remnes</p>
 
