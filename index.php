@@ -1,4 +1,12 @@
 <?php
+/**
+ * All requests routed through here. This is an overview of what actaully happens during
+ * a request.
+ *
+ * @package KobayashiCore
+ */
+
+// ---------------------------------------------------------------------------------------
 //
 // PHASE: BOOTSTRAP
 //
@@ -9,14 +17,16 @@ require(KOBAYASHI_INSTALL_PATH.'/src/bootstrap.php');
 
 $kb = CKobayashi::Instance();
 
+
+// ---------------------------------------------------------------------------------------
 //
 // PHASE: FRONTCONTROLLER ROUTE
 //
 $kb->FrontControllerRoute();
 
 
+// ---------------------------------------------------------------------------------------
 //
 // PHASE: THEME ENGINE RENDER
 //
 $kb->ThemeEngineRender();
-

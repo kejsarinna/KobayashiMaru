@@ -2,8 +2,8 @@
 /**
  * Interface for classes implementing a controller.
  *
- * @package LydiaCore
+ * @package KobayashiCore
  */
 interface IController {
-  public function Index();
+	public function Index();
 }

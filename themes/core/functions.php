@@ -2,9 +2,18 @@
 /**
  * Helpers for the template file.
  */
-$kb->data['header'] = '<h1>Kobayashi Maru</h1>';
+
+/**
+ * Add static entries for use in the template file. 
+ */
+$kb->data['header'] = 'Kobayashi Maru';
+$kb->data['slogan'] = 'A PHP-based MVC-inspired CMF';
+$kb->data['favicon']      = theme_url('logo_80x80.png');
+$kb->data['logo']         = theme_url('logo_80x80.png');
+$kb->data['logo_width']   = 80;
+$kb->data['logo_height']  = 80;
 $kb->data['footer'] = <<<EOD
-<p>Footer: &copy; Lydia by Mikael Roos (mos@dbwebb.se) used by Astrid Remnes</p>
+<p>Kobayashi Maru, based on Lydia &copy; by Mikael Roos (mos@dbwebb.se)</p>
 
 <p>Tools: 
 <a href="http://validator.w3.org/check/referer">html5</a>
